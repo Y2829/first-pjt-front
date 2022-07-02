@@ -11,8 +11,8 @@ const Authentication: NextPage = () => {
   return (
     <Box
       sx={{
-        width: "100vw",
-        height: "100vh",
+        width: "100%",
+        height: "100%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -22,7 +22,7 @@ const Authentication: NextPage = () => {
       <Box
         sx={{
           padding: 5,
-          height: "80vh",
+          height: "100%",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",

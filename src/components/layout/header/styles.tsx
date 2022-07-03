@@ -13,6 +13,7 @@ export const StyledBox = styled(Box)(() => ({
   justifyContent: "center",
   alignItems: "center",
   backgroundColor: colors.primary,
+  zIndex: 100,
 }));
 
 export const Title = styled(Typography)(() => ({

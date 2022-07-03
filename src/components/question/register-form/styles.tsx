@@ -6,6 +6,7 @@ export const StyledBox = styled(Box)(() => ({
   display: "flex",
   justifyContent: "center",
 }));
+
 export const StyledTextField = styled(TextField)(() => ({
   width: "60%",
 }));

@@ -1,5 +1,5 @@
 import { styled } from "@mui/system";
-import { Box } from "@mui/system";
+import { Box, Typography } from "@mui/material";
 
 import { colors } from "src/theme/colors";
 import { HEADER_HEIGHT } from "src/enums/layout";
@@ -9,5 +9,12 @@ export const StyledBox = styled(Box)(() => ({
   height: `${HEADER_HEIGHT}px`,
   position: "fixed",
   top: 0,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
   backgroundColor: colors.primary,
+}));
+
+export const Title = styled(Typography)(() => ({
+  fontSize: "32px",
 }));

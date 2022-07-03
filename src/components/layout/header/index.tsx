@@ -1,9 +1,13 @@
 import type { FC } from "react";
 
-import { StyledBox } from "./styles";
+import { StyledBox, Title } from "./styles";
 
 const Header: FC = () => {
-  return <StyledBox></StyledBox>;
+  return (
+    <StyledBox>
+      <Title>Whai.</Title>
+    </StyledBox>
+  );
 };
 
 export default Header;

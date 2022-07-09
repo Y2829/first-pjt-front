@@ -1,12 +1,12 @@
 import type { FC } from "react";
 import OAuthButton from "./oauth-button";
-import KakaoTalk from "public/images/kakaotalk.png";
+import { KAKAO_LOGO } from "src/enums/oauth_logo";
 
 const KakaoButton: FC = () => {
   return (
     <OAuthButton
       text={"카카오계정 로그인"}
-      logo={KakaoTalk}
+      logoSrc={KAKAO_LOGO}
       sx={{
         backgroundColor: "#FEE500",
         color: "#000",

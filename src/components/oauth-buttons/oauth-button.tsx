@@ -1,15 +1,16 @@
 import type { FC } from "react";
 import type { StaticImageData } from "next/image";
 import type { SxProps } from "@mui/material";
+import Image from "next/image";
 import Box from "@mui/material/Box";
 
 interface OAuthButtonProps {
   text: string;
-  logo?: StaticImageData;
+  logoSrc: string;
   sx?: SxProps;
 }
 
-const OAuthButton: FC<OAuthButtonProps> = ({ text, logo, sx }) => {
+const OAuthButton: FC<OAuthButtonProps> = ({ text, logoSrc, sx }) => {
   return (
     <Box
       sx={{
@@ -17,16 +18,19 @@ const OAuthButton: FC<OAuthButtonProps> = ({ text, logo, sx }) => {
         height: "60px",
         borderRadius: 2,
         display: "flex",
-        justifyContent: "space-around",
+        justifyContent: "space-between",
         alignItems: "center",
         backgroundColor: "#fff",
         color: "#000",
         fontSize: "14px",
         cursor: "pointer",
+        padding: 2,
         ...sx,
       }}
     >
+      <img src={logoSrc} width="50" height="50" />
       {text}
+      <Box></Box>
     </Box>
   );
 };

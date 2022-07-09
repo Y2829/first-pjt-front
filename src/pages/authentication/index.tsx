@@ -8,6 +8,7 @@ import NaverButton from "src/components/oauth-buttons/naver";
 import GoogleButton from "src/components/oauth-buttons/google";
 
 const Authentication: NextPage = () => {
+  console.log(process.env.NEXT_PUBLIC_ANALYTICS_ID);
   return (
     <Box
       sx={{

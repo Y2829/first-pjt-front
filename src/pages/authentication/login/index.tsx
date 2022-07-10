@@ -3,10 +3,10 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 
 import Login from "src/components/authentication/login";
-import KakaoButton from "src/components/oauth-buttons/kakao";
-import NaverButton from "src/components/oauth-buttons/naver";
-import GoogleButton from "src/components/oauth-buttons/google";
-import GithubLogin from "src/components/oauth-buttons/github";
+import KakaoLogin from "src/components/oauth-login/kakao";
+import NaverLogin from "src/components/oauth-login/naver";
+import GoogleLogin from "src/components/oauth-login/google";
+import GithubLogin from "src/components/oauth-login/github";
 
 const Authentication: NextPage = () => {
   console.log(process.env.NEXT_PUBLIC_ANALYTICS_ID);
@@ -49,9 +49,9 @@ const Authentication: NextPage = () => {
             justifyContent: "space-around",
           }}
         >
-          <KakaoButton />
-          <NaverButton />
-          <GoogleButton />
+          <KakaoLogin />
+          <NaverLogin />
+          <GoogleLogin />
           <GithubLogin />
         </Box>
       </Box>

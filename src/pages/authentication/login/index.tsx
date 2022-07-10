@@ -6,6 +6,7 @@ import Login from "src/components/authentication/login";
 import KakaoButton from "src/components/oauth-buttons/kakao";
 import NaverButton from "src/components/oauth-buttons/naver";
 import GoogleButton from "src/components/oauth-buttons/google";
+import GithubLogin from "src/components/oauth-buttons/github";
 
 const Authentication: NextPage = () => {
   console.log(process.env.NEXT_PUBLIC_ANALYTICS_ID);
@@ -41,10 +42,18 @@ const Authentication: NextPage = () => {
             소셜 계정으로 로그인
           </Divider>
         </Box>
-
-        <KakaoButton />
-        <NaverButton />
-        <GoogleButton />
+        <Box
+          sx={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-around",
+          }}
+        >
+          <KakaoButton />
+          <NaverButton />
+          <GoogleButton />
+          <GithubLogin />
+        </Box>
       </Box>
     </Box>
   );

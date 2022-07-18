@@ -2,14 +2,14 @@ import type { ReactElement } from "react";
 import type { NextPageWithLayout } from "../_app";
 
 import Layout from "src/components/layout";
-import QuestionRegisterForm from "src/components/question/register-form";
+import SelectCategory from "src/components/question/select-category";
 import QuestionList from "src/components/question/question-list";
 import { StyledBox } from "./styles";
 
 const Question: NextPageWithLayout = () => {
   return (
     <StyledBox>
-      <QuestionRegisterForm />
+      <SelectCategory />
       <QuestionList />
     </StyledBox>
   );

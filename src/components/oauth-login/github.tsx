@@ -8,7 +8,7 @@ const GithubLogin: FC = () => {
   const handleClick = () => {
     const resposne = postOAuthSignin("github");
   };
-  return <OAuthButton logoSrc={GITHUB_LOGO} />;
+  return <OAuthButton logoSrc={GITHUB_LOGO} onClick={handleClick}/>;
 };
 
 export default GithubLogin;

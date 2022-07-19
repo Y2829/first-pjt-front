@@ -31,6 +31,6 @@ export const StyledMenuItem = styled(MenuItem)({});
 export const StyledFormControl = styled(FormControl)({});
 
 export const SearchButton = styled(Button)({
-  backgroundColor: colors.primary,
   marginLeft: 16,
+  color: "#fff",
 });

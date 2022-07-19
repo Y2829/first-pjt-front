@@ -3,16 +3,24 @@ import type { SxProps } from "@mui/material";
 
 import { StyledButton } from "./styles";
 
+type VariantType = "contained" | "outlined";
+
 interface CommonButtonProps {
   text: string;
   onClick: () => void;
+  variant?: VariantType;
   sx?: SxProps;
 }
 
-const CommonButton: FC<CommonButtonProps> = ({ text, onClick, sx }) => {
+const CommonButton: FC<CommonButtonProps> = ({
+  text,
+  onClick,
+  variant = "contained",
+  sx,
+}) => {
   return (
     <StyledButton
-      variant="contained"
+      variant={variant}
       onClick={onClick}
       sx={{
         ...sx,

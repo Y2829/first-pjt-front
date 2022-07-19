@@ -10,7 +10,7 @@ import Select from "@mui/material/Select";
 interface CustomSelectProps {
   label: string;
   menuItems: Array<{ value: string; name: string }>;
-  onChange: (value: string) => void;
+  onChange: (e: SelectChangeEvent) => void;
   sx?: SxProps;
 }
 
@@ -20,26 +20,23 @@ const CustomSelect: FC<CustomSelectProps> = ({
   onChange,
   sx,
 }) => {
-  const [value, setValue] = useState<string>("");
+  // const [value, setValue] = useState<string>("");
 
-  const handleChange = (e: SelectChangeEvent) => {
-    onChange(e.target.value as string);
-  };
   return (
     <Box sx={{ minWidth: 120 }}>
       <FormControl
         sx={{
-          width: 140,
+          width: 150,
           ...sx,
         }}
       >
-        <InputLabel id="demo-simple-select-label">{label}</InputLabel>
+        <InputLabel id={label}>{label}</InputLabel>
         <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={value}
+          labelId={label}
+          id={label}
           label={label}
-          onChange={handleChange}
+          onChange={onChange}
+          defaultValue=""
         >
           {menuItems.map((menu) => (
             <MenuItem key={menu.value} value={menu.value}>

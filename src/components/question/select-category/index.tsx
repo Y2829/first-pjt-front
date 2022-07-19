@@ -16,7 +16,9 @@ const SelectCategory: FC = () => {
         label={"프로그래밍 언어"}
         menuItems={ProgrammingLanguageSelect}
         onChange={(_) => null}
-        sx={{ mx: 1 }}
+        sx={{
+          mr: 1,
+        }}
       />
       <CustomSelect
         label={"프레임워크"}

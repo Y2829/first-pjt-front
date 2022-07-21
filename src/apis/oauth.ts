@@ -1,7 +1,7 @@
 import type { SOCIAL_TYPE } from "src/types/oauth";
 import axios from "axios";
 
-import { BASE_URL } from "src/configs/indext";
+import { BASE_URL } from "src/configs";
 
 const REDIRECT_URI = "/question";
 

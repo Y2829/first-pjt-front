@@ -9,7 +9,7 @@ import {
   DBSelect,
 } from "src/configs/cateogry-select";
 
-const SelectCategory: FC = () => {
+const CategorySelect: FC = () => {
   return (
     <Wrapper>
       <CustomSelect
@@ -42,4 +42,4 @@ const SelectCategory: FC = () => {
   );
 };
 
-export default SelectCategory;
+export default CategorySelect;

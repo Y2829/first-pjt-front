@@ -10,6 +10,7 @@ import Select from "@mui/material/Select";
 interface CustomSelectProps {
   label: string;
   menuItems: Array<{ value: string; name: string }>;
+  defaultValue?: string;
   onChange: (e: SelectChangeEvent) => void;
   sx?: SxProps;
 }
@@ -17,6 +18,7 @@ interface CustomSelectProps {
 const CustomSelect: FC<CustomSelectProps> = ({
   label,
   menuItems,
+  defaultValue,
   onChange,
   sx,
 }) => {
@@ -36,7 +38,7 @@ const CustomSelect: FC<CustomSelectProps> = ({
           id={label}
           label={label}
           onChange={onChange}
-          defaultValue=""
+          defaultValue={defaultValue ?? ""}
         >
           {menuItems.map((menu) => (
             <MenuItem key={menu.value} value={menu.value}>

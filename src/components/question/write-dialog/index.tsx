@@ -1,5 +1,6 @@
 import type { FC } from "react";
-
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 import {
   StyledDialog,
   StyledDialogTitle,
@@ -11,17 +12,22 @@ import {
   ContentInput,
   InputBox,
   CreateButton,
+  CloseButton,
 } from "./styles";
 
 interface WriteModalProps {
   open: boolean;
+  onClickClose: () => void;
 }
 
-const WriteDialog: FC<WriteModalProps> = ({ open }) => {
+const WriteDialog: FC<WriteModalProps> = ({ open, onClickClose }) => {
   return (
     <StyledDialog open={open}>
       <StyledDialogTitle>
         <TitleText>질문 등록</TitleText>
+        <IconButton onClick={onClickClose}>
+          <CloseIcon />
+        </IconButton>
       </StyledDialogTitle>
       <StyledDialogContent>
         <InputBox>
@@ -32,6 +38,9 @@ const WriteDialog: FC<WriteModalProps> = ({ open }) => {
         </InputBox>
       </StyledDialogContent>
       <StyledDialogActions>
+        <CloseButton variant="outlined" onClick={onClickClose}>
+          취소
+        </CloseButton>
         <CreateButton variant="contained">등록</CreateButton>
       </StyledDialogActions>
     </StyledDialog>

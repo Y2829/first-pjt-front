@@ -12,6 +12,6 @@ export const FrameworkSelect = [
   { value: "angular", name: "Angular" },
 ];
 
-export const InfraSelect = [{ value: "docker", name: "docker" }];
+export const InfraSelect = [{ value: "docker", name: "Docker" }];
 
 export const DBSelect = [{ value: "mysql", name: "MySQL" }];

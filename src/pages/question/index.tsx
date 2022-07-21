@@ -3,7 +3,7 @@ import type { NextPageWithLayout } from "../_app";
 import { useState } from "react";
 
 import Layout from "src/components/layout";
-import SelectCategory from "src/components/question/select-category";
+import CategorySelect from "src/components/question/category-select";
 import QuestionList from "src/components/question/question-list";
 import SearchGroup from "src/components/question/search-group";
 import CreateButton from "src/components/question/create-button";
@@ -15,15 +15,19 @@ const Question: NextPageWithLayout = () => {
   const handleClickCreateQuestion = () => {
     setOpenModal(true);
   };
+
+  const handleClickCloseModal = () => {
+    setOpenModal(false);
+  };
   return (
     <StyledBox>
       <SearchGroup />
       <Wrapper>
-        <SelectCategory />
+        <CategorySelect />
         <CreateButton onClick={handleClickCreateQuestion} />
       </Wrapper>
       <QuestionList />
-      <WriteDialog open={openModal} />
+      <WriteDialog open={openModal} onClickClose={handleClickCloseModal} />
     </StyledBox>
   );
 };

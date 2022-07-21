@@ -15,7 +15,10 @@ import { colors } from "src/theme/colors";
 export const StyledDialog = styled(Dialog)({});
 
 export const StyledDialogTitle = styled(DialogTitle)({
-  width: "500px",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  width: "600px",
   borderBottom: "1px solid #e6e6e6",
 });
 
@@ -42,7 +45,15 @@ export const InputBox = styled(Box)({
 
 export const CreateButton = styled(Button)({
   backgroundColor: colors.primary,
+  color: "#fff",
   "&:hover": {
     backgroundColor: colors.primary,
+  },
+});
+
+export const CloseButton = styled(Button)({
+  color: colors.primary,
+  "&:hover": {
+    backgroundColor: "#fff",
   },
 });
